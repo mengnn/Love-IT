@@ -1,0 +1,744 @@
+html,body {
+	height: 100%;
+	 position: relative;
+	 }
+.container { height: 100%; position: absolute; top:0; left:0; right: 0; bottom: 0; overflow: hidden;}
+.backdrop-wrap {width: 300%; height: 100%; margin: 0; padding:0; }
+.backdrop {display: block; width: 33.333%; height: 100%;  margin: 0; padding:0;float:left;  background-size: cover; background-position: center center; position: relative; list-style: none;}
+
+/*page background*/
+.backdrop.one { background-color: #C7E5DE;}
+.backdrop.two { background-color: #FECCC5;}
+.backdrop.three {background-color: #E9CB9E;}
+
+.a_background {width: 100%;height: 100%;position: absolute}
+.a_background_top {
+	width: 100%;
+	height: 71.6%;
+	background-image: url("images/background/a_background_top.png");    background-size: 100% 100%
+}
+.a_background_middle {
+	width: 100%;
+	height: 13.1%;
+	background-image: url("images/background/a_background_middle.png");    background-size: 100% 100%
+}
+.a_background_botton {
+	width: 100%;
+	height: 15.3%;
+	background-image: url("images/background/a_background_botton.png");    background-size: 100% 100%
+}
+.b_background {
+	width: 100%;
+	height: 100%;
+	background-image: url("images/QixiB-dark.png");
+	background-size: 100% 100%;position: absolute
+}
+.b_background.lamp-bright {
+	 background-image: url("images/QixiB-bright.png")}
+.b_background_preload {
+	background: url(images/QixiB-bright.png) no-repeat -9999px -9999px
+}
+.c_background {
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	position: absolute
+}
+.c_background_top {
+	width: 100%;
+	height: 71.6%;
+	background-image: url("images/background/c_background_top.png");    background-size: 100% 100%
+}
+.c_background_middle {
+	width: 100%;height: 13.1%;
+	background-image: url("images/background/c_background_middle.png");    background-size: 100% 100%
+}
+.c_background_botton {
+	width: 100%;
+	height: 15.3%;
+	background-image: url("images/background/c_background_botton.png");    background-size: 100% 100%
+}
+
+
+/*boy*/
+.charector {
+	width: 151px;
+	height: 291px;
+	background: url(images/boy.png) -0px -291px no-repeat;
+	position: absolute;
+	left: 5%;bottom: 10%;
+}
+
+  /* 普通行走 */
+.slowWalk {
+	-webkit-animation-name: person-slow;
+	-webkit-animation-duration: 950ms;
+	-webkit-animation-iteration-count: infinite;    -webkit-animation-timing-function: steps(1, start);
+	-moz-animation-name: person-slow;
+	-moz-animation-duration: 950ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: steps(1, start);
+}
+
+ /* 暂停 */
+ .pauseWalk {
+	 -webkit-animation-play-state: paused;
+	 -moz-animation-play-state: paused;
+}
+
+ /* 带花走 */
+ .slowFlowersWalk {
+	 -webkit-animation-name: person-flowers-slow;
+	 -webkit-animation-duration: 950ms;
+	 -webkit-animation-iteration-count: infinite;     -webkit-animation-timing-function: step-start;
+	 -moz-animation-name: person-flowers-slow;
+	 -moz-animation-duration: 950ms;
+	 -moz-animation-iteration-count: infinite;
+	 -moz-animation-timing-function: step-start;
+}
+  
+  /*慢走*/
+  @-webkit-keyframes person-slow {
+    0% { background-position: -0px -291px; }
+    25% { background-position: -602px -0px; }
+    50% { background-position: -302px -291px; }
+    75% { background-position: -151px -291px; }
+    100% { background-position: -0px -291px; }
+  }
+  @-moz-keyframes person-slow {
+    0% { background-position: -0px -291px; }
+    25% { background-position: -602px -0px; }
+    50% { background-position: -302px -291px; }
+    75% { background-position: -151px -291px; }
+    100% { background-position: -0px -291px; }
+  }
+
+   /*带花走*/
+   @-webkit-keyframes person-flowers-slow {
+     0% { background-position: -453px -0px; }
+     25% { background-position: -904px -0px; }
+     50% { background-position: -451px -0px; }
+     75% { background-position: -753px -0px; }
+     100% { background-position: -300px -0px; }
+   }
+   @-moz-keyframes person-flowers-slow {
+     0% { background-position: -453px -0px; }
+     25% { background-position: -904px -0px; }
+     50% { background-position: -451px -0px; }
+     75% { background-position: -753px -0px; }
+     100% { background-position: -300px -0px; }
+   }
+
+  #sun { 
+  background: url(images/sun.png) no-repeat;
+   position: absolute; 
+   z-index: 1;
+   top:-30px; 
+   height: 201px; 
+   width: 201px; 
+   right: 40%; 
+}
+  .rotation {
+	  -webkit-animation-name: rotation;
+	   -webkit-animation-duration: 30s;
+}
+
+  @-webkit-keyframes rotation {
+  	0% { transform: translateX(0) translateY(0); }
+  	100% { transform: translateX(-2000px) translateY(400px); }
+  }
+  @-moz-keyframes rotation {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-2000px) translateY(400px); }
+  }
+
+ .cloud {
+	 z-index: 2;
+	 position: absolute;
+}
+ .cloud1 {
+	 width: 181px;
+	 height: 101px;
+	 left: -5%;
+	 top: 15%;
+	 background: url("images/cloud1.png");
+}
+ .cloud2 {
+	 width: 301px;
+	 height: 140px;
+	 right: -5%;
+	 background: url("images/cloud2.png");
+}
+ 
+ .cloud1Anim{
+	 -webkit-animation-name: smallCloud;
+	 -webkit-animation-duration: 30s;
+	 -webkit-animation-iteration: infinite;
+	 -moz-animation-name: smallCloud;
+	 -moz-animation-duration: 30s;
+	 -moz-animation-iteration: infinite;
+}
+ 
+ .cloud2Anim{
+	 -webkit-animation-name: largeCloud;
+	 -webkit-animation-duration: 60s;
+	 -webkit-animation-iteration: infinite;
+	 -moz-animation-name: largeCloud;
+	 -moz-animation-duration: 60s;
+	 -moz-animation-iteration: infinite;
+}
+ 
+ @-webkit-keyframes smallCloud {
+    0% { left: -5%; }
+    100% { left: 100%; }
+ }
+ @-moz-keyframes smallCloud {
+    0% { left: -5%; }
+    100% { left: 100%; }
+ }
+ 
+ @-webkit-keyframes largeCloud {
+     0% { right: -5%; }
+     100% { right: 100%; }
+ }
+ @-moz-keyframes largeCloud {
+     0% { right: -5%; }
+     100% { right: 100%; }
+ }
+
+ .shop {
+	 width: 39.5%;
+	 height: 35.5%;
+	 position: absolute;
+	 left: 29%;
+	 top: 36.5%;
+}
+ .door {
+	 position: absolute;
+	 width: 32%;
+	 height: 100%;
+	 top: 32%;
+	 height: 68%;
+	 overflow: hidden;
+	 left: 58.5%;
+}
+
+ .door-left,
+ .door-right {
+	 width: 50%;
+	 height: 100%;
+	 position: absolute;
+}
+
+ .door-left {
+	 left: 0;
+	 background: url(images/door-left.png);
+	 background-size: 100% 100%;
+}
+
+ .door-right {
+	 left: 50%;
+	 background: url(images/door-right.png);
+	 background-size: 100% 100%;
+}
+
+ .bird {
+	 min-width: 91px;
+	 min-height: 71px;
+	 top: 10%;
+	 position: absolute;
+	 z-index: 10;
+	 right: -91px;
+	 background: url(images/bird.png) -182px 0 no-repeat;
+}
+
+ .birdFly {
+	 -webkit-animation-name: bird-slow;
+	 -webkit-animation-duration: 400ms;
+	 -webkit-animation-timing-function: step-start;     -webkit-animation-iteration-count: infinite;
+	 -moz-animation-name: bird-slow;
+	 -moz-animation-duration: 400ms;
+	 -moz-animation-timing-function: step-start;     -moz-animation-iteration-count: infinite;
+}
+
+ @-webkit-keyframes bird-slow {
+     0% {
+         background-position: -182px 0
+     }
+     50% {
+         background-position: 0 0
+     }
+     75% {
+         background-position: -91px 0
+     }
+     100% {
+         background-position: -182px 0
+     }
+ }
+ #snowflake {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     overflow: hidden
+ }
+
+ .snowRoll {
+     position: absolute;
+     opacity: 0;
+     -webkit-animation-name: mysnow;
+     -webkit-animation-duration: 20s;
+     -moz-animation-name: mysnow;
+     -moz-animation-duration: 20s;
+     height: 80px
+ }
+
+ @-webkit-keyframes mysnow {
+     0% {
+         bottom: 100%
+     }
+     50% {
+         -webkit-transform: rotate(1080deg)
+     }
+     100% {
+         -webkit-transform: rotate(0deg) translate3d(50px, 50px, 50px)
+     }
+ }
+
+ @-moz-keyframes mysnow {
+     0% {
+         bottom: 100%
+     }
+     50% {
+         -moz-transform: rotate(1080deg)
+     }
+     100% {
+         -moz-transform: rotate(0deg) translate3d(50px, 50px, 50px)
+     }
+ }
+
+ .girl {
+     background: url(images/girl.png) -755px -0px no-repeat;
+     position: absolute;
+     right: 40%;
+     top: 37%;
+     width: 151px;
+     height: 291px
+ }
+
+ .girl-rotate {
+     -webkit-animation-name: girl-rotate;
+     -webkit-animation-duration: 850ms;
+     -webkit-animation-iteration-count: 1;
+     -webkit-animation-timing-function: step-start;
+     -webkit-animation-fill-mode: forwards;
+     -moz-animation-name: girl-rotate;
+     -moz-animation-duration: 850ms;
+     -moz-animation-iteration-count: 1;
+     -moz-animation-timing-function: step-start;
+     -moz-animation-fill-mode: forwards
+ }
+
+ @-webkit-keyframes girl-rotate {
+     0% {
+         background-position: -604px -0px
+     }
+     16.7% {
+         background-position: -151px -0px
+     }
+     33.4% {
+         background-position: -906px -0px
+     }
+     50.1% {
+         background-position: -0px -0px
+     }
+     66.8% {
+         background-position: -302px -0px
+     }
+     83.5% {
+         background-position: -453px -0px
+     }
+     100% {
+         background-position: -604px -0px
+     }
+ }
+
+ @-moz-keyframes girl-rotate {
+     16.7% {
+         background-position: -151px -0px
+     }
+     33.4% {
+         background-position: -906px -0px
+     }
+     50.1% {
+         background-position: -0px -0px
+     }
+     66.8% {
+         background-position: -302px -0px
+     }
+     83.5% {
+         background-position: -453px -0px
+     }
+     100% {
+         background-position: -604px -0px
+     }
+ }
+
+ .bridge-bottom {
+     position: absolute;
+     width: 41%;
+     height: 24%;
+     left: 29.5%;
+     top: 76%;
+     overflow: hidden;
+     -webkit-transform: scale(.6);
+     transform: scale(.8);
+ }
+
+ .water {
+     width: 100%;
+     height: 100%
+ }
+
+ .water_1,.water_2,.water_3,.water_4 {
+     width: 100%;
+     position: absolute;
+     height: 50%;
+     -webkit-animation-name: shake;
+     -webkit-animation-duration: 40s;
+     -webkit-animation-direction: alternate;
+     -webkit-anination-timing-function: linear;
+     -webkit-animation-iteration-count: infinite;
+     -moz-animation-name: shake;
+     -moz-animation-duration: 40s;
+     -moz-animation-direction: alternate;
+     -moz-anination-timing-function: linear;
+     -moz-animation-iteration-count: infinite
+ }
+
+ .water_1 {
+     width: 131px;
+     height: 15px;
+     top: 13%;
+     left: 35%;
+     background: url(images/water.png) -261px -0px no-repeat
+ }
+
+ .water_2 {
+     width: 161px;
+     height: 9px;
+     top: 25%;
+     left: 45%;
+     background: url(images/water.png) -693px -0px no-repeat;
+     -webkit-animation-delay: 2s;
+     -moz-animation-delay: 2s
+ }
+
+ .water_3 {
+     width: 261px;
+     height: 29px;
+     top: 50%;
+     left: 15%;
+     background: url(images/water.png) -0px -0px no-repeat;
+     -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s
+ }
+
+ .water_4 {
+     width: 301px;
+     height: 12px;
+     top: 70%;
+     left: 30%;
+     background: url(images/water.png) -392px -0px no-repeat;
+     -webkit-animation-delay: 3s;
+     -moz-animation-delay: 3s
+ }
+
+ @-webkit-keyframes shake {
+     0%, 100% {
+         -webkit-transform: translate3d(0, 0, 0)
+     }
+     10%,
+     30%,
+     50%,
+     70%,
+     90% {
+         -webkit-transform: translate3d(-30px, 0px, 0)
+     }
+     20%,
+     40%,
+     60%,
+     80% {
+         -webkit-transform: translate3d(30px, 0px, 0)
+     }
+ }
+
+ @-moz-keyframes shake {
+     0%, 100% {
+         -moz-transform: translate3d(0, 0, 0)
+     }
+     10%,
+     30%,
+     50%,
+     70%,
+     90% {
+         -moz-transform: translate3d(-30px, 0px, 0)
+     }
+     20%,
+     40%,
+     60%,
+     80% {
+         -moz-transform: translate3d(30px, 0px, 0)
+     }
+ }
+
+ .stars {
+     width: 100%;
+     height: 100%;
+     position: absolute
+ }
+
+ .stars>li {
+    list-style: none;
+     position: absolute;
+     width: 30px;
+     height: 31px;
+     background-image: url("images/stars.png");
+     -webkit-animation-name: flash;
+     -webkit-animation-timing-function: ease-in-out;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+     -moz-animation-name: flash;
+     -moz-animation-timing-function: ease-in-out;
+     -moz-animation-iteration-count: infinite;
+     -moz-animation-direction: alternate
+ }
+
+ .stars1 {
+     top: 20%;
+     left: 30%;
+     -webkit-animation-duration: 5s;
+     -moz-animation-duration: 5s
+ }
+
+ .stars2 {
+     top: 15%;
+     left: 20%;
+     -webkit-animation-duration: 20s;
+     -moz-animation-duration: 20s
+ }
+
+ .stars3 {
+     top: 25%;
+     left: 85%;
+     -webkit-animation-duration: 15s;
+     -moz-animation-duration: 15s
+ }
+
+ .stars4 {
+     top: 30%;
+     left: 70%;
+     -webkit-animation-duration: 25s;
+     -moz-animation-duration: 25s
+ }
+
+ .stars5 {
+     top: 25%;
+     left: 20%;
+     -webkit-animation-duration: 30s;
+     -moz-animation-duration: 30s
+ }
+
+ .stars6 {
+     top: 10%;
+     left: 65%;
+     -webkit-animation-duration: 10s;
+     -moz-animation-duration: 10s
+ }
+
+ @-webkit-keyframes flash {
+     0%, 50%, 100% {
+         opacity: 1
+     }
+     25%,
+     75% {
+         opacity: 0
+     }
+ }
+
+ @-moz-keyframes flash {
+     0%, 50%, 100% {
+         opacity: 1
+     }
+     25%,
+     75% {
+         opacity: 0
+     }
+ }
+
+ .logo {
+     width: 185px;
+     height: 81px;
+     background-image: url(images/love3.jpg);
+     z-index: 999999;
+     position: absolute;
+     left: 50%;
+     margin-left: -92.5px;
+     top: 300px;
+     display: none
+ }
+
+ .logolightSpeedIn {
+     display: block;
+     -webkit-animation-name: lightSpeedIn;
+     -webkit-animation-timing-function: ease-out;
+     -webkit-animation-duration: 1s;
+     -moz-animation-name: lightSpeedIn;
+     -moz-animation-timing-function: ease-out;
+     -moz-animation-duration: 1s
+ }
+ @-webkit-keyframes lightSpeedIn {
+     0% {
+         -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+         opacity: 0
+     }
+     60% {
+         -webkit-transform: skewX(20deg);
+         opacity: 1
+     }
+     80% {
+         -webkit-transform: skewX(-5deg);
+         opacity: 1
+     }
+     100% {
+         -webkit-transform: none;
+         opacity: 1
+     }
+ }
+
+ @-moz-keyframes lightSpeedIn {
+     0% {
+         -moz-transform: translate3d(100%, 0, 0) skewX(-30deg);
+         opacity: 0
+     }
+     60% {
+         -moz-transform: skewX(20deg);
+         opacity: 1
+     }
+     80% {
+         -moz-transform: skewX(-5deg);
+         opacity: 1
+     }
+     100% {
+         -moz-transform: none;
+         opacity: 1
+     }
+ }
+
+/* logo 动画 */
+ .logoshake {
+     -webkit-animation-name: logoshake;
+     -webkit-animation-duration: .5s;
+     -moz-animation-name: logoshake;
+     -moz-animation-duration: .5s
+ }
+ @-webkit-keyframes logoshake {
+     0%, 100% {
+         -webkit-transform: translate3d(0, 0, 0)
+     }
+     10%,
+     30%,
+     50%,
+     70%,
+     90% {
+         -webkit-transform: translate3d(-5px, 0, 0)
+     }
+     20%,
+     40%,
+     60%,
+     80% {
+         -webkit-transform: translate3d(10px, 0, 0)
+     }
+ }
+
+ @-moz-keyframes logoshake {
+     0%, 100% {
+         -moz-transform: translate3d(0, 0, 0)
+     }
+     10%,
+     30%,
+     50%,
+     70%,
+     90% {
+         -moz-transform: translate3d(-5px, 0, 0)
+     }
+     20%,
+     40%,
+     60%,
+     80% {
+         -moz-transform: translate3d(10px, 0, 0)
+     }
+ }
+ /*男孩转身*/
+  .boy-rotate {
+      -webkit-animation-name: boy-rotate;
+      -webkit-animation-duration: 850ms;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: step-start;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: boy-rotate;
+      -moz-animation-duration: 850ms;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: step-start;
+      -moz-animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes boy-rotate {
+      0% {
+          background-position: -603px -291px;
+      }
+      16.7% {
+          background-position: -150px -0px;
+      }
+      33.4% {
+          background-position: -453px -291px;
+      }
+      50.1% {
+          background-position: -0px -0px;
+      }
+      66.8% {
+          background-position: -903px -291px;
+      }
+      83.5% {
+          background-position: -753px -291px;
+      }
+      100% {
+          background-position: -603px -291px;
+      }
+  }
+
+  @-moz-keyframes boy-rotate {
+      0% {
+          /*background-position: -603px -291px;*/
+      }
+      16.7% {
+          background-position: -150px -0px;
+      }
+      33.4% {
+          background-position: -453px -291px;
+      }
+      50.1% {
+          background-position: -0px -0px;
+      }
+      66.8% {
+          background-position: -903px -291px;
+      }
+      83.5% {
+          background-position: -753px -291px;
+      }
+      100% {
+          background-position: -603px -291px;
+      }
+  }
+
